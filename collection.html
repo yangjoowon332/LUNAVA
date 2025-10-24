@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - Lunnava</title>
+    
+    <!-- 디자인스타일 -->
+    <link rel="stylesheet" href="css/can.css">
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 폰트 -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/f3c9d07c5d.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <!-- 헤더자리 -->
+        </header>
+        
+        <div id="hero_sub">
+            <div class="centerbox">
+                <img src="img/collection/hero.png" alt="Collection">
+                <div class="textbox">
+                    <h1>Collection</h1>
+                    <strong>나만의 향기를 찾아보세요</strong>
+                    <p>Lunnava의 프리미엄 향수 컬렉션을 만나보세요</p>
+                </div>
+            </div>
+            <span class="pc_nav_bg"></span>
+        </div>
+
+        <!-- 제품 카탈로그 섹션 -->
+        <div class="catalog_section">
+            <div class="center_box">
+                <!-- 베스트 상품 섹션 -->
+                <div class="best_products_section">
+                    <h2>베스트 상품</h2>
+                    <div class="best_products_grid">
+                        <div class="best_product_item">
+                            <div class="product_image_container">
+                                <img src="/img/collection/best1.png" alt="Drea">
+                            </div>
+                            <h3>Drea</h3>
+                        </div>
+                        <div class="best_product_item">
+                            <div class="product_image_container">
+                                <img src="/img/collection/best2.png" alt="Velvet Dusk">
+                            </div>
+                            <h3>Velvet Dusk</h3>
+                        </div>
+                        <div class="best_product_item">
+                            <div class="product_image_container">
+                                <img src="/img/collection/best3.png" alt="Calm">
+                            </div>
+                            <h3>Calm</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 필터 섹션 -->
+                <div class="filter_section">
+                    <div class="filter_buttons">
+                        <button class="filter_btn active" data-filter="all">전체</button>
+                        <button class="filter_btn" data-filter="floral">플로럴</button>
+                        <button class="filter_btn" data-filter="pillow">필로우 미스트</button>
+                        <button class="filter_btn" data-filter="hair">헤어 리프레서</button>
+                    </div>
+                </div>
+
+                <!-- 제품 그리드 -->
+                <div class="products_grid">
+                    <div class="product_item" data-category="floral">
+                        <div class="product_image">
+                            <img src="img/collection/a1.png" alt="Dream">
+                        </div>
+                        <div class="product_info">
+                            <h3>Dream</h3>
+                            <p>#룸스프레이#공기탈취제</p>
+                            <p>청량한 유칼립투스 향기</p>
+                            <div class="product_rating">★ 4.9</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="floral">
+                        <div class="product_image">
+                            <img src="img/collection/a2.png" alt="Lumière">
+                        </div>
+                        <div class="product_info">
+                            <h3>Lumière</h3>
+                            <p>#룸스프레이#필로우미스트</p>
+                            <p>상큼한 레몬 향</p>
+                            <div class="product_rating">★ 4.8</div>
+                            <div class="product_price"> 리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="pillow">
+                        <div class="product_image">
+                            <img src="img/collection/a3.png" alt="EverFresh">
+                        </div>
+                        <div class="product_info">
+                            <h3>EverFresh</h3>
+                            <p>#향초 #심신안정 #힐링라이프</p>
+                            <p>청량감 가득한 바다 내음</p>
+                            <div class="product_rating">★ 4.7</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="floral">
+                        <div class="product_image">
+                            <img src="img/collection/a4.png" alt="Velora">
+                        </div>
+                        <div class="product_info">
+                            <h3>Velora</h3>
+                            <p>#룸스프레이#필로우미스트</p>
+                            <p>부드러운 시더우드 향기</p>
+                            <div class="product_rating">★ 4.9</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="floral">
+                        <div class="product_image">
+                            <img src="img/collection/b1.png" alt="Clairsense">
+                        </div>
+                        <div class="product_info">
+                            <h3>Clairsense</h3>
+                            <p>#룸스프레이#공기탈취제</p>
+                            <p>깊은 머스크 내음</p>
+                            <div class="product_rating">★ 4.6</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="floral">
+                        <div class="product_image">
+                            <img src="img/collection/b2.png" alt="Julle">
+                        </div>
+                        <div class="product_info">
+                            <h3>Juile</h3>
+                            <p>#향수 #남성용 #고급스러움</p>
+                            <p>풋풋한 민트향</p>
+                            <div class="product_rating">★ 4.8</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="floral">
+                        <div class="product_image">
+                            <img src="img/collection/b3.png" alt="Noir Lumine">
+                        </div>
+                        <div class="product_info">
+                            <h3>Noir Lumine</h3>
+                            <p>#향수 #남성용 #시원함</p>
+                            <p>깨끗한 바다 내음</p>
+                            <div class="product_rating">★ 4.9</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="floral">
+                        <div class="product_image">
+                            <img src="img/collection/b4.png" alt="Camellia">
+                        </div>
+                        <div class="product_info">
+                            <h3>Camellia</h3>
+                            <p>#룸스프레이 #패브릭 스프레이</p>
+                            <p>달콤한 바닐라 향</p>
+                            <div class="product_rating">★ 4.7</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="pillow">
+                        <div class="product_image">
+                            <img src="img/collection/c1.png" alt="Aurora Elixir">
+                        </div>
+                        <div class="product_info">
+                            <h3>Aurora Elixir</h3>
+                            <p>#룸스프레이#공기탈취제</p>
+                            <p>스모키하면서도 달콤한 나무 향</p>
+                            <div class="product_rating">★ 4.8</div>
+                            <div class="product_price"> 리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="pillow">
+                        <div class="product_image">
+                            <img src="img/collection/c2.png" alt="Lunavi">
+                        </div>
+                        <div class="product_info">
+                            <h3>Lunavi</h3>
+                            <p>#향초 #심신안정 #스파 </p>
+                            <p>세련되고 우아한 느낌 향기</p>
+                            <div class="product_rating">★ 4.9</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="hair">
+                        <div class="product_image">
+                            <img src="img/collection/c3.png" alt="Amberwood">
+                        </div>
+                        <div class="product_info">
+                            <h3>Amberwood</h3>
+                            <p>#향수 #여성용 #플라워</p>
+                            <p>은은한 꽃향과 나무향디 </p>
+                            <div class="product_rating">★ 4.6</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+
+                    <div class="product_item" data-category="pillow">
+                        <div class="product_image">
+                            <img src="img/collection/c4.png" alt="Patchouli">
+                        </div>
+                        <div class="product_info">
+                            <h3>Patchouli</h3>
+                            <p>#룸스프레이#공기탈취제</p>
+                            <p>청량한 유칼립투스 향기</p>
+                            <div class="product_rating">★ 4.7</div>
+                            <div class="product_price">리뷰 2,199</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 페이지네이션 -->
+                <div class="pagination">
+                    <button class="page_btn prev_page">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="page_numbers">
+                        <button class="page_number active">1</button>
+                        <button class="page_number">2</button>
+                        <button class="page_number">3</button>
+                        <button class="page_number">4</button>
+                        <span class="page_ellipsis">...</span>
+                        <button class="page_number">999</button>
+                    </div>
+                    <button class="page_btn next_page">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="center_box">
+                <div class="footer_logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="footer_info">
+                    <div class="textbox">
+                        <div class="footer_menu1">
+                            <a href="#">오시는 길</a>
+                            <a href="#">고객서비스</a>
+                        </div>
+                        <div class="footer_menu2">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">영상정보처리기기 운영/관리방침</a>
+                        </div>
+                    </div>
+                    <div class="textbox3">
+                        <strong>LUNNAVA</strong>
+                        <p>사업자등록번호: 123-45-67890</p>
+                        <p>주소: 서울특별시 강남구 테헤란로 123, 4층</p>
+                        <p>1234-5678</p>
+                    </div>
+                    <div class="sns">
+                        <a href="#"><img src="img/footer_sns.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="script/action.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script>
+            // GSAP 애니메이션
+            gsap.registerPlugin(ScrollTrigger);
+
+            // 히어로 섹션 애니메이션
+            gsap.fromTo("#hero_sub .textbox h1", {
+                opacity: 0,
+                y: 50
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.5,
+                ease: "power2.out"
+            });
+
+            gsap.fromTo("#hero_sub .textbox strong", {
+                opacity: 0,
+                y: 30
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.8,
+                ease: "power2.out"
+            });
+
+            gsap.fromTo("#hero_sub .textbox p", {
+                opacity: 0,
+                y: 20
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 1,
+                ease: "power2.out"
+            });
+
+            gsap.fromTo("#hero_sub .centerbox img", {
+                opacity: 0,
+                scale: 1.1
+            }, {
+                opacity: 1,
+                scale: 1,
+                duration: 1.2,
+                delay: 0.3,
+                ease: "power2.out"
+            });
+
+            // 베스트 상품 그리드 애니메이션
+            gsap.fromTo(".best_products_section h2", {
+                opacity: 0,
+                y: 50
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".best_products_section",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            gsap.fromTo(".best_product_item", {
+                opacity: 0,
+                y: 80,
+                scale: 0.9
+            }, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".best_products_grid",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // 필터 섹션 애니메이션
+            gsap.fromTo(".filter_section", {
+                opacity: 0,
+                y: 50
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".filter_section",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // 제품 그리드 애니메이션
+            gsap.fromTo(".product_item", {
+                opacity: 0,
+                y: 80,
+                scale: 0.9
+            }, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".products_grid",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // 페이지네이션 애니메이션
+            gsap.fromTo(".pagination", {
+                opacity: 0,
+                y: 50
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".pagination",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+
+            // 제품 아이템 호버 효과
+            document.querySelectorAll('.product_item').forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    gsap.to(item, {
+                        y: -10,
+                        scale: 1.05,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    gsap.to(item, {
+                        y: 0,
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+
+            // 필터 버튼 기능
+            document.querySelectorAll('.filter_btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 모든 버튼에서 active 클래스 제거
+                    document.querySelectorAll('.filter_btn').forEach(b => b.classList.remove('active'));
+                    // 클릭한 버튼에 active 클래스 추가
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    const products = document.querySelectorAll('.product_item');
+                    
+                    products.forEach(product => {
+                        if (filter === 'all' || product.getAttribute('data-category') === filter) {
+                            gsap.to(product, {
+                                opacity: 1,
+                                scale: 1,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            });
+                        } else {
+                            gsap.to(product, {
+                                opacity: 0.3,
+                                scale: 0.9,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            });
+                        }
+                    });
+                });
+            });
+
+            // 베스트 상품 아이템 호버 효과
+            document.querySelectorAll('.best_product_item').forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    gsap.to(item, {
+                        y: -15,
+                        scale: 1.02,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    gsap.to(item, {
+                        y: 0,
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+
+            // 페이지네이션 기능
+            document.querySelectorAll('.page_number').forEach((page, index) => {
+                page.addEventListener('click', () => {
+                    document.querySelectorAll('.page_number').forEach(p => p.classList.remove('active'));
+                    page.classList.add('active');
+                    
+                    // 페이지 변경 애니메이션
+                    gsap.fromTo(".product_item", {
+                        opacity: 0,
+                        y: 50
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        stagger: 0.05,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

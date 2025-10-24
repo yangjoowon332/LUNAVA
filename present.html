@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunava</title>
+
+    <!-- 디자인스타일 -->
+    <link rel="stylesheet" href="css/can.css">
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 폰트 -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/f3c9d07c5d.js"></script>
+
+</head>
+
+
+<body>
+    <div class="wrap">
+        <header>
+            <!-- 헤더자리 -->
+        </header>
+        <div id="hero_sub">
+            <div class="centerbox">
+                <img src="img/present/visual.png"
+                    alt="">
+                <div class="textbox">
+                    <h1>PRESENT</h1>
+                    <strong>당신의 밤을 비추는 향<br>
+                    </strong>
+                    <p>은은한 조명과 향기가 전하는 작은 행복</p>
+                </div>
+            </div>
+            <span class="pc_nav_bg"></span>
+        </div>
+    </div>
+    <div class="wrap_present">
+        <div class="titlebox">
+            <h2>Best Seller</h2>
+            <p>HOLIDAY</p>
+            <img src="img/present/line_img.png" alt="">
+        </div>
+        <section class="gallery">
+           
+          <!-- 1행 왼쪽: 큰 이미지 -->
+          <article class="tile img span-2 col-1">
+            <img src="/img/present/img1.png" alt="Gift set 1">
+          </article>
+          <!-- 1행 오른쪽: 작은 베이지 -->
+          <article class="tile info col-2">
+            <div>
+              <div class="name">Holiday Gift</div>
+              <p class="desc">따뜻한 향의 캔들 콜렉션</p>
+            </div>
+          </article>
+          <!-- 2행 왼쪽: 작은 베이지 -->
+          <article class="tile info col-1">
+            <div>
+              <div class="name">Room Spray</div>
+              <p class="desc">은은한 잔향</p>
+            </div>
+          </article>
+          <!-- 2~3행 오른쪽: 큰 이미지 -->
+          <article class="tile img span-2 col-2">
+            <img src="/img/present/img2.png" alt="Gift set 2">
+          </article>
+    
+          <!-- 3행 왼쪽: 작은 베이지 -->
+          <article class="tile info col-1">
+            <div>
+              <div class="name">Perfume</div>
+              <p class="desc">데일리 무드 향수</p>
+            </div>
+          </article>
+          <!-- 3~4행 오른쪽: 큰 이미지 -->
+          <article class="tile img span-2 col-2">
+            <img src="/img/present/img3.png" alt="Candle focus">
+          </article>
+    
+          <!-- 4~5행 왼쪽: 큰 이미지 -->
+          <article class="tile img span-2 col-1">
+            <img src="/img/present/img4.png" alt="Bottle set">
+          </article>
+          <!-- 4행 오른쪽: 작은 베이지 -->
+          <article class="tile info col-2">
+            <div>
+              <div class="name">Gift Box</div>
+              <p class="desc">시즌 한정 패키지</p>
+            </div>
+          </article>
+        </section>
+      </div>
+
+    <footer>
+        <div class="center_box">
+            <div class="footer_logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="footer_info">
+                <div class="textbox">
+                    <div class="footer_menu1">
+                        <a href="#">오시는 길</a>
+                        <a href="#">고객서비스</a>
+                    </div>
+                    <div class="footer_menu2">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">영상정보처리기기 운영/관리방침</a>
+                    </div>
+                </div>
+                <div class="textbox3">
+                    <strong>LUNNAVA</strong>
+
+                    <p>사업자등록번호: 123-45-67890</p>
+                    <p>주소: 서울특별시 강남구 테헤란로 123, 4층</p>
+                    <p>1234-5678</p>
+                </div>
+                <div class="sns">
+                    <a href="#"><img src="img/footer_sns.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script/action.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        AOS.init();
+        
+        // GSAP 애니메이션
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // wrap_present 영역 애니메이션
+        gsap.fromTo(".wrap_present", {
+            opacity: 0,
+            y: 100
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".wrap_present",
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none reverse"
+            }
+        });
+        
+        // titlebox 애니메이션
+        gsap.fromTo(".titlebox h2", {
+            opacity: 0,
+            y: 50
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.2,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".titlebox",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+        
+        gsap.fromTo(".titlebox p", {
+            opacity: 0,
+            y: 30
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.4,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".titlebox",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+        
+        gsap.fromTo(".titlebox img", {
+            opacity: 0,
+            scale: 0.8
+        }, {
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            delay: 0.6,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".titlebox",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+        
+        // gallery 아이템들 순차 애니메이션
+        gsap.fromTo(".gallery .tile", {
+            opacity: 0,
+            y: 80,
+            scale: 0.9
+        }, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".gallery",
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            }
+        });
+        
+        // gallery 이미지들 호버 효과
+        document.querySelectorAll('.gallery .tile img').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                gsap.to(img, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            
+            img.addEventListener('mouseleave', () => {
+                gsap.to(img, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+        
+        // hero_sub 영역 애니메이션
+        gsap.fromTo("#hero_sub .textbox h1", {
+            opacity: 0,
+            y: 50
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: 0.5,
+            ease: "power2.out"
+        });
+        
+        gsap.fromTo("#hero_sub .textbox strong", {
+            opacity: 0,
+            y: 30
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.8,
+            ease: "power2.out"
+        });
+        
+        gsap.fromTo("#hero_sub .textbox p", {
+            opacity: 0,
+            y: 20
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 1,
+            ease: "power2.out"
+        });
+        
+        gsap.fromTo("#hero_sub .centerbox img", {
+            opacity: 0,
+            scale: 1.1
+        }, {
+            opacity: 1,
+            scale: 1,
+            duration: 1.2,
+            delay: 0.3,
+            ease: "power2.out"
+        });
+    </script>
+
+</body>
+
+</html>

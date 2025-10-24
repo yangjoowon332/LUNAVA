@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunava</title>
+
+    <!-- 디자인스타일 -->
+    <link rel="stylesheet" href="css/can.css">
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 폰트 -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/f3c9d07c5d.js"></script>
+
+</head>
+
+
+<body>
+    <div class="wrap">
+        <header>
+            <!-- 헤더자리 -->
+        </header>
+        <div id="hero_sub">
+            <div class="centerbox">
+                <img src="img/login_img/mumyeonheo_Extend_the_background_of_the_image_naturally_keepi_f97833c5-9300-4b8b-96cf-88d64b638f5c_3.png"
+                    alt="">
+                <div class="textbox">
+                    <h1>MEMBER JOIN</h1>
+                    <strong>당신만의 향과 빛을<br>
+                        만나러 오신 걸 환영합니다.
+                    </strong>
+                </div>
+            </div>
+            <span class="pc_nav_bg"></span>
+        </div>
+
+        <div class="section_box_sub2 join">
+
+            <div class="centerbox">
+                <h2>MEMBER JOIN</h2>
+
+                <div class="content">
+
+                    <form method="get" action="index.html">
+                        <fieldset>
+                            <legend>회원가입</legend>
+                            <h3>회원정보 입력<span>(*필수입력)</span></h3>
+
+                            <div class="join_wrap">
+                                <ul>
+                                    <li class="pilsu">
+                                        <label for="name">이름</label>
+                                        <div class="textbox">
+                                            <input type="text" placeholder="이름을 입력해주세요" required minlength="2"
+                                                class="smali_input" id="name">
+                                        </div>
+                                    </li>
+                                    <li class="pilsu">
+                                        <label for="name">아이디</label>
+                                        <div class="textbox">
+                                            <input type="text" placeholder="ID을 입력해주세요" required minlength="2"
+                                                class="smali_input">
+                                            <a href="#" class="btn id_check">아이디 중복확인</a>
+                                        </div>
+                                    </li>
+
+                                    </li>
+                                    <li class="pilsu">
+                                        <label for="">비밀번호</label>
+                                        <div class="textbox">
+                                            <input type="text" placeholder="패스워드를 입력해주세요" required minlength="2"
+                                                class="smali_input">
+                                        </div>
+                                    </li>
+                                    </li>
+                                    <li class="pilsu">
+                                        <label for="">비밀번호 확인</label>
+                                        <div class="textbox">
+                                            <input type="text" placeholder="패스워드를 입력해주세요" required minlength="2"
+                                                class="smali_input">
+                                        </div>
+                                    </li>
+                                    </li>
+                                    <li class="pilsu">
+                                        <label for="">연락처</label>
+                                        <div class="textbox">
+                                            <input type="text" placeholder="연락처를 입력해주세요" required minlength="3"
+                                                pattern="[0-9]+" class="smali_input">
+                                        </div>
+                                    </li>
+                                    </li>
+                                    <li>
+                                        <label for="">이메일</label>
+                                        <div class="textbox">
+                                            <input type="text">
+                                        </div>
+                                    </li>
+                                    </li>
+                                    <li>
+                                        <label for="">주소</label>
+                                        <div class="textbox">
+                                            <input type="text">
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <label for="">성별</label>
+                                        <div class="textbox">
+                                            <ul class="echi">
+                                                <li><label for="gender1"><input type="radio" name="gender1"
+                                                            value="male">남성</label></li>
+                                                <li><label for="gender2"><input type="radio" name="gender2"
+                                                            value="female">여성</label></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <label for="">알게된 경로</label>
+                                        <div class="textbox">
+                                            <ul class="echi">
+                                                <li><label for="channel"><input type="radio" name="channel"
+                                                            value="Instagram">인스타그램</label></li>
+                                                <li><label for="channel"><input type="radio" name="channel"
+                                                            value="YouTube">유튜브</label></li>
+                                                <li><label for="channel"><input type="radio" name="channel"
+                                                            value="Search Ads">인터넷 광고</label></li>
+                                                <li><label for="channel"><input type="radio" name="channel"
+                                                            value="Twitter">트위터</label></li>
+                                                <li><label for="channel"><input type="radio" name="channel"
+                                                            value="Word of Mouth">주변인 추천</label></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <label for="">약관</label>
+                                        <div class="textbox">
+                                            <textarea name="" id="" spellcheck="false" readonly>
+Lunnava 회원가입 약관 (예시)
+제1조 (목적)
+
+이 약관은 Lunnava(이하 "회사")가 제공하는 온라인 서비스(이하 "서비스")의 이용과 관련하여, 회사와 회원 간의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
+
+제2조 (정의)
+
+"회원"이라 함은 본 약관에 동의하고, 회사와 이용계약을 체결하여 서비스를 이용하는 자를 말합니다.
+
+"아이디(ID)"란 회원의 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자와 숫자의 조합을 의미합니다.
+
+"비밀번호"란 회원이 부여받은 아이디와 일치되는 회원임을 확인하고 비밀을 보호하기 위해 설정한 문자와 숫자의 조합을 의미합니다.
+
+제3조 (약관의 효력 및 변경)
+
+본 약관은 서비스 화면에 게시하거나 기타의 방법으로 회원에게 공지함으로써 효력이 발생합니다.
+
+회사는 관련 법령을 위배하지 않는 범위에서 약관을 개정할 수 있으며, 개정 시 회원에게 사전 공지합니다.
+
+회원이 개정 약관에 동의하지 않는 경우, 회원은 서비스 이용을 중단하고 탈퇴할 수 있습니다.
+
+제4조 (회원가입 및 관리)
+
+회원가입은 이용자가 약관에 동의하고, 회사가 정한 절차에 따라 신청하며 회사가 이를 승인함으로써 성립됩니다.
+
+회사는 다음 각 호에 해당하는 경우 가입 신청을 거부할 수 있습니다.
+
+타인의 명의를 도용한 경우
+
+허위의 정보를 기재한 경우
+
+서비스 운영에 현저히 지장을 줄 우려가 있는 경우
+
+회원은 개인정보 변경 시 즉시 회사에 수정 요청을 하여야 하며, 미이행으로 발생한 불이익에 대해 회사는 책임지지 않습니다.
+
+제5조 (서비스 이용)
+
+회사는 회원에게 서비스 이용에 필요한 계정을 제공합니다.
+
+회사는 정기 점검, 시스템 장애, 기타 불가피한 사유가 발생할 경우 일시적으로 서비스 제공을 중단할 수 있습니다.
+
+제6조 (회원의 의무)
+
+회원은 관계 법령, 약관, 회사의 공지사항을 준수해야 하며, 다음 행위를 해서는 안 됩니다.
+
+타인의 개인정보 도용
+
+불법적이거나 비도덕적인 콘텐츠 게시
+
+회사의 운영을 방해하는 행위
+
+회원은 자신의 계정과 비밀번호를 관리할 책임이 있으며, 이를 제3자에게 양도하거나 공유할 수 없습니다.
+
+제7조 (개인정보 보호)
+
+회사는 회원의 개인정보를 관련 법령에 따라 보호합니다.
+
+개인정보 처리에 관한 구체적인 사항은 별도의 개인정보처리방침에 따릅니다.
+
+제8조 (계약 해지 및 탈퇴)
+
+회원은 언제든지 서비스 내 제공되는 절차를 통해 탈퇴할 수 있습니다.
+
+회사는 회원이 약관을 위반하거나 법령을 위반한 경우 사전 통지 후 이용계약을 해지할 수 있습니다.
+
+제9조 (면책조항)
+
+회사는 천재지변, 불가항력, 회원의 귀책사유로 인한 서비스 이용 장애에 대해 책임을 지지 않습니다.
+
+회사는 회원이 서비스 이용을 통해 기대하는 수익이나 결과에 대해 보장하지 않습니다.
+
+제10조 (관할법원 및 준거법)
+
+본 약관과 관련된 분쟁은 대한민국 법을 준거법으로 하며, 관할 법원은 회사 본점 소재지를管轄하는 법원으로 합니다.
+                                                        </textarea>
+                                    <li>
+                                        <label for="">약관</label>
+                                        <div class="rule" tabindex="1">
+                                            Lunnava 회원가입 약관 (예시)
+                                            제1조 (목적)
+
+                                            이 약관은 Lunnava(이하 "회사")가 제공하는 온라인 서비스(이하 "서비스")의 이용과 관련하여, 회사와 회원 간의 권리, 의무 및
+                                            책임사항을 규정함을 목적으로 합니다.
+
+                                            제2조 (정의)
+
+                                            "회원"이라 함은 본 약관에 동의하고, 회사와 이용계약을 체결하여 서비스를 이용하는 자를 말합니다.
+
+                                            "아이디(ID)"란 회원의 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자와 숫자의 조합을 의미합니다.
+
+                                            "비밀번호"란 회원이 부여받은 아이디와 일치되는 회원임을 확인하고 비밀을 보호하기 위해 설정한 문자와 숫자의 조합을 의미합니다.
+
+                                            제3조 (약관의 효력 및 변경)
+
+                                            본 약관은 서비스 화면에 게시하거나 기타의 방법으로 회원에게 공지함으로써 효력이 발생합니다.
+
+                                            회사는 관련 법령을 위배하지 않는 범위에서 약관을 개정할 수 있으며, 개정 시 회원에게 사전 공지합니다.
+
+                                            회원이 개정 약관에 동의하지 않는 경우, 회원은 서비스 이용을 중단하고 탈퇴할 수 있습니다.
+
+                                            제4조 (회원가입 및 관리)
+
+                                            회원가입은 이용자가 약관에 동의하고, 회사가 정한 절차에 따라 신청하며 회사가 이를 승인함으로써 성립됩니다.
+
+                                            회사는 다음 각 호에 해당하는 경우 가입 신청을 거부할 수 있습니다.
+
+                                            타인의 명의를 도용한 경우
+
+                                            허위의 정보를 기재한 경우
+
+                                            서비스 운영에 현저히 지장을 줄 우려가 있는 경우
+
+                                            회원은 개인정보 변경 시 즉시 회사에 수정 요청을 하여야 하며, 미이행으로 발생한 불이익에 대해 회사는 책임지지 않습니다.
+
+                                            제5조 (서비스 이용)
+
+                                            회사는 회원에게 서비스 이용에 필요한 계정을 제공합니다.
+
+                                            회사는 정기 점검, 시스템 장애, 기타 불가피한 사유가 발생할 경우 일시적으로 서비스 제공을 중단할 수 있습니다.
+
+                                            제6조 (회원의 의무)
+
+                                            회원은 관계 법령, 약관, 회사의 공지사항을 준수해야 하며, 다음 행위를 해서는 안 됩니다.
+
+                                            타인의 개인정보 도용
+
+                                            불법적이거나 비도덕적인 콘텐츠 게시
+
+                                            회사의 운영을 방해하는 행위
+
+                                            회원은 자신의 계정과 비밀번호를 관리할 책임이 있으며, 이를 제3자에게 양도하거나 공유할 수 없습니다.
+
+                                            제7조 (개인정보 보호)
+
+                                            회사는 회원의 개인정보를 관련 법령에 따라 보호합니다.
+
+                                            개인정보 처리에 관한 구체적인 사항은 별도의 개인정보처리방침에 따릅니다.
+
+                                            제8조 (계약 해지 및 탈퇴)
+
+                                            회원은 언제든지 서비스 내 제공되는 절차를 통해 탈퇴할 수 있습니다.
+
+                                            회사는 회원이 약관을 위반하거나 법령을 위반한 경우 사전 통지 후 이용계약을 해지할 수 있습니다.
+
+                                            제9조 (면책조항)
+
+                                            회사는 천재지변, 불가항력, 회원의 귀책사유로 인한 서비스 이용 장애에 대해 책임을 지지 않습니다.
+
+                                            회사는 회원이 서비스 이용을 통해 기대하는 수익이나 결과에 대해 보장하지 않습니다.
+
+                                            제10조 (관할법원 및 준거법)
+
+                                            본 약관과 관련된 분쟁은 대한민국 법을 준거법으로 하며, 관할 법원은 회사 본점 소재지를管轄하는 법원으로 합니다.
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            </li>
+
+                            </ul>
+                            <div class="btn_box">
+                                <button class="btn btn_submit">전송</button>
+                            </div>
+                </div>
+                </fieldset>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <footer>
+        <div class="center_box">
+            <div class="footer_logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="footer_info">
+                <div class="textbox">
+                    <div class="footer_menu1">
+                        <a href="#">오시는 길</a>
+                        <a href="#">고객서비스</a>
+                    </div>
+                    <div class="footer_menu2">
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">영상정보처리기기 운영/관리방침</a>
+                    </div>
+                </div>
+                <div class="textbox3">
+                    <strong>LUNNAVA</strong>
+
+                    <p>사업자등록번호: 123-45-67890</p>
+                    <p>주소: 서울특별시 강남구 테헤란로 123, 4층</p>
+                    <p>1234-5678</p>
+                </div>
+                <div class="sns">
+                    <a href="#"><img src="img/footer_sns.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script/action.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
