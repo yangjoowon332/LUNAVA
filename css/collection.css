@@ -1,0 +1,536 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("fonts.css");
+
+
+
+/* 컬렉션 페이지 스타일 */
+
+/* 베스트 상품 */
+.best_products_section {
+    width: 100%;
+    padding: 80px 0 90px;
+    background: #F7F8FA;
+}
+
+.best_products_section .conterbox {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* 상품 타이틀 */
+.best_products_title {
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+
+
+.best_products_title>span {
+    display: block;
+    margin-bottom: 8px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+
+    color: #1A2A49;
+
+}
+
+.best_products_title h2 {
+    margin: 0;
+
+    font-family: "Manrope", "Pretendard", sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+.best_products_title p {
+    margin-top: 12px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: rgba(26, 42, 73, 0.65);
+}
+
+
+
+/* 슬라이드그룹 */
+
+.best_products_slider {
+    position: relative;
+    width: 100%;
+}
+
+
+
+/* 슬라이드 버튼 */
+.slider_controls {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.slider_prev,
+.slider_next {
+    position: absolute;
+
+    top: 217px;
+    transform: translateY(-50%);
+
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid rgba(26, 42, 73, 0.2);
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #1A2A49;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.slider_prev {
+    left: -70px;
+}
+
+.slider_next {
+    right: -70px;
+}
+
+.slider_prev:hover,
+.slider_next:hover {
+    background: #1A2A49;
+    color: #fff;
+}
+
+/* 베스트 상품 그리드 */
+.best_products_grid {
+    display: flex;
+
+    width: 100%;
+
+    gap: 40px;
+    margin-bottom: 100px;
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+}
+
+.best_products_grid::-webkit-scrollbar {
+    display: none;
+}
+
+.best_product_item {
+    flex: 0 0 calc((100% - 80px) / 3);
+
+    scroll-snap-align: start;
+}
+
+
+/* 이미지 */
+.product_image_container {
+    position: relative;
+
+    width: 100%;
+    height: 435px;
+
+    overflow: hidden;
+}
+
+.product_image_container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: opacity 0.4s ease;
+}
+
+/* Hover */
+.product_image_container .img_default {
+    opacity: 1;
+}
+
+.product_image_container .img_hover {
+    opacity: 0;
+}
+
+.best_product_item:hover .img_default {
+    opacity: 0;
+}
+
+.best_product_item:hover .img_hover {
+    opacity: 1;
+}
+
+/* 베스트상품 인포 */
+
+.best_product_info {
+    padding: 16px 8px 0;
+}
+
+.best_product_info .best_label {
+    display: block;
+    margin-bottom: 6px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+
+    color: #8B6F45;
+}
+
+.best_product_info h3 {
+    margin-bottom: 5px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+.best_product_info .category {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    color: rgba(26, 42, 73, 0.7);
+}
+
+.best_product_info .scent {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+
+    color: rgba(26, 42, 73, 0.5);
+}
+
+
+/*  SHOP BY CATEGORY */
+
+.category_section {
+    width: 100%;
+    padding: 100px 0 300px;
+
+    background: #fff;
+}
+
+
+/*   TITLE */
+
+.collection_header {
+    margin-bottom: 30px;
+}
+
+
+.collection_header>span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+
+    color: #1A2A49;
+}
+
+
+.collection_header h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+
+.collection_header p {
+    margin-top: 10px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: rgba(26, 42, 73, 0.65);
+}
+
+
+/*  CATEGORY GRID */
+
+.category_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/*  CATEGORY CARD */
+
+.category_card {
+    position: relative;
+
+    display: block;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    color: #1A2A49;
+}
+
+
+/* 이미지 */
+.category_card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* 이미지 위에 아주 약한 밝은 레이어 */
+.category_card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.70) 0%,
+            rgba(255, 255, 255, 0.20) 48%,
+            rgba(255, 255, 255, 0) 70%);
+
+    pointer-events: none;
+}
+
+
+/* CATEGORY TEXT */
+
+.category_text {
+    position: absolute;
+
+    left: 24px;
+    top: 28px;
+
+    z-index: 2;
+}
+
+
+.category_text h3 {
+    margin: 0 0 14px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #1A2A49;
+}
+
+
+.category_text p {
+    margin: 0;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+
+    color: rgba(26, 42, 73, 0.78);
+}
+
+
+/* Explore */
+.category_link {
+    display: inline-block;
+
+    margin-top: 34px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+/*  HOVER */
+
+.category_card:hover img {
+    transform: scale(1.025);
+}
+
+.category_card:hover .category_link {
+    text-decoration: underline;
+}
+
+/* GIFTING */
+
+.collection_gifting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    min-height: 520px;
+
+    background: #F5F3EF;
+}
+
+
+/* 왼쪽 이미지 */
+.gifting_visual {
+    overflow: hidden;
+}
+
+.gifting_visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* 오른쪽 텍스트 */
+.gifting_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 70px 80px;
+
+    background: #FAFAF8;
+}
+
+
+/* 작은 제목 */
+.gifting_eyebrow {
+    margin-bottom: 12px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    color: #9A7343;
+}
+
+
+/* 메인 제목 */
+.gifting_content h2 {
+    margin: 0 0 22px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #1A2A49;
+}
+
+
+/* 서브 제목 */
+.gifting_content h3 {
+    margin: 0 0 20px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+
+/* 본문 */
+.gifting_content p {
+    margin: 0 0 14px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: rgba(26, 42, 73, 0.7);
+}
+
+
+/* CTA */
+.gifting_link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #1A2A49;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.05em;
+
+    color: #1A2A49;
+
+    transition:
+        opacity 0.3s ease,
+        border-color 0.3s ease;
+}
+.gifting_link span {
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+
+.gifting_link:hover {
+    opacity: 0.7;
+
+    border-color: rgba(26, 42, 73, 0.5);
+}
+
+
+.gifting_link:hover span {
+    transform: translateX(6px);
+}
