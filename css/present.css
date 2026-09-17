@@ -1,0 +1,1314 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("fonts.css");
+
+
+/* 선물페이지 */
+
+:root {
+    --bg: #dcdcdc;
+    /* 바탕 회색 */
+    --card: #e9e2de;
+    /* 베이지 카드색 */
+    --dot: #b2a69f;
+    /* 동그라미 포인트색 */
+    --text: #2b2b2b;
+    --maxw: 420px;
+    /* 모바일 기준 폭 */
+    --radius: 16px;
+    --gap: 12px;
+}
+
+
+.titlebox {
+    width: 100%;
+    padding: 80px 0 90px;
+    background: #F7F8FA;
+}
+
+.titlebox img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ========================================
+   SIGNATURE GIFT SETS
+======================================== */
+
+.gift_sets_section {
+    width: 100%;
+    padding: 100px 0 120px;
+
+    background: #F7F8FA;
+}
+
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+
+.gift_sets_header {
+    margin-bottom: 48px;
+
+    text-align: center;
+}
+
+.gift_sets_header>span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+
+    color: #9A7343;
+}
+
+
+
+.gift_sets_header h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #1A2A49;
+}
+
+
+.gift_sets_header p {
+    margin-top: 14px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: rgba(26, 42, 73, 0.62);
+}
+
+
+/* ========================================
+   GIFT SET GRID
+======================================== */
+
+.gift_sets_grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* 카드 */
+.gift_set_card {
+    min-width: 0;
+
+    background: #fff;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.gift_set_image {
+    width: 100%;
+    height: 420px;
+
+    overflow: hidden;
+}
+
+
+.gift_set_image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* 이미지에만 가벼운 Hover */
+.gift_set_card:hover .gift_set_image img {
+    transform: scale(1.025);
+}
+
+
+/* ========================================
+   PRODUCT INFO
+======================================== */
+
+.gift_set_info {
+    padding: 24px 22px 30px;
+}
+
+
+/* GIFT SET 01 */
+.gift_set_label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+
+    color: #9A7343;
+}
+
+
+/* Gift Set 이름 */
+.gift_set_info h3 {
+    margin: 0 0 10px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.35;
+
+    color: #1A2A49;
+}
+
+
+/* 구성 제품 */
+.gift_set_products {
+    margin: 0 0 6px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+
+/* 향 */
+.gift_set_scent {
+    margin: 0 0 18px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+
+    color: rgba(26, 42, 73, 0.52);
+}
+
+
+/* 설명 */
+.gift_set_description {
+    margin: 0 0 26px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+
+    color: rgba(26, 42, 73, 0.7);
+}
+
+
+/* CTA */
+.gift_set_link {
+    display: inline-block;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #1A2A49;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+
+    color: #1A2A49;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.gift_set_link:hover {
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media screen and (max-width: 900px) {
+
+    .gift_sets_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+    .gift_sets_section {
+        padding: 70px 0 90px;
+    }
+
+
+    .gift_sets_header {
+        margin-bottom: 34px;
+
+        text-align: left;
+    }
+
+
+    .gift_sets_header h2 {
+        font-size: 34px;
+    }
+
+
+    .gift_sets_grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .gift_set_image {
+        height: 390px;
+    }
+
+
+    .gift_set_info {
+        padding: 20px 4px 0;
+    }
+
+}
+
+/* GIFT GUIDE */
+
+/* ========================================
+   GIFT BY MOMENT
+======================================== */
+
+.gift_moment_section {
+    width: 100%;
+    padding: 110px 0 120px;
+
+    background: #fff;
+}
+
+
+/* ========================================
+   SECTION HEADER
+======================================== */
+
+.gift_moment_header {
+    margin-top: 150px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+
+.gift_moment_header>span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+
+    color: #9A7343;
+}
+
+
+.gift_moment_header h2 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #1A2A49;
+}
+
+
+.gift_moment_header p {
+    margin-top: 14px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: rgba(26, 42, 73, 0.62);
+}
+
+
+/* ========================================
+   MOMENT GRID
+======================================== */
+
+.gift_moment_grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* 카드 전체 */
+.gift_moment_card {
+    position: relative;
+
+    display: block;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    color: #fff;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.gift_moment_image {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.gift_moment_image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* 이미지 위 어두운 그라데이션 */
+.gift_moment_card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(180deg,
+            rgba(15, 25, 45, 0.05) 20%,
+            rgba(15, 25, 45, 0.65) 100%);
+
+    pointer-events: none;
+
+    transition: background 0.4s ease;
+}
+
+
+/* ========================================
+   TEXT
+======================================== */
+
+.gift_moment_info {
+    position: absolute;
+
+    left: 32px;
+    bottom: 30px;
+
+    z-index: 2;
+}
+
+
+.gift_moment_info>span:first-child {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+.gift_moment_info h3 {
+    margin: 0 0 8px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #fff;
+}
+
+
+.gift_moment_info p {
+    margin: 0 0 18px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.86);
+}
+
+
+/* DISCOVER */
+.gift_moment_link {
+    display: inline-block;
+
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+
+    color: #fff;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.gift_moment_card:hover::after {
+    background:
+        linear-gradient(180deg,
+            rgba(15, 25, 45, 0.12) 20%,
+            rgba(4, 15, 37, 0.78) 100%);
+}
+
+
+
+/* DISCOVER  */
+
+.gift_moment_link {
+    display: inline-block;
+
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+
+    color: #fff;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.gift_moment_card:hover .gift_moment_link {
+    transform: translateX(6px);
+
+    border-color: #fff;
+}
+
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media screen and (max-width: 800px) {
+
+    .gift_moment_grid {
+        gap: 18px;
+    }
+
+    .gift_moment_card {
+        height: 360px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+    .gift_moment_section {
+        padding: 80px 0 90px;
+    }
+
+
+    .gift_moment_header h2 {
+        font-size: 34px;
+    }
+
+
+    .gift_moment_grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .gift_moment_card {
+        height: 340px;
+    }
+
+
+    .gift_moment_info {
+        left: 24px;
+        bottom: 24px;
+    }
+
+
+    .gift_moment_info h3 {
+        font-size: 24px;
+    }
+
+}
+
+/* ========================================
+   SEASONAL GIFT GUIDE
+======================================== */
+
+.seasonal_gift_guide {
+    position: relative;
+
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    margin-top: 100px;
+}
+
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.seasonal_gift_visual {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.seasonal_gift_track {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+}
+
+.seasonal_gift_slide {
+    flex: 0 0 100%;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+
+.seasonal_gift_visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+
+}
+
+/* 이미지 위 어두운 그라데이션 */
+.seasonal_gift_guide::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(90deg,
+            rgba(15, 25, 45, 0.72) 0%,
+            rgba(15, 25, 45, 0.42) 45%,
+            rgba(15, 25, 45, 0.05) 80%);
+
+    pointer-events: none;
+}
+
+
+.seasonal_gift_seasons {
+    display: flex;
+
+    gap: 24px;
+
+    margin-bottom: 32px;
+}
+
+
+.seasonal_gift_season {
+    position: relative;
+
+    padding: 0 0 7px;
+
+    border: 0;
+
+    background: transparent;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+
+/* 밑줄 */
+.seasonal_gift_season::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: #fff;
+
+    transition: width 0.3s ease;
+}
+
+
+.seasonal_gift_season:hover {
+    color: #fff;
+}
+
+
+.seasonal_gift_season.active {
+    color: #fff;
+}
+
+
+.seasonal_gift_season.active::after {
+    width: 100%;
+}
+
+
+
+
+
+@media screen and (max-width: 650px) {
+
+    .seasonal_gift_guide {
+        height: 500px;
+
+        margin-top: 70px;
+    }
+
+
+    .seasonal_gift_guide::after {
+        background:
+            linear-gradient(180deg,
+                rgba(15, 25, 45, 0.1) 0%,
+                rgba(15, 25, 45, 0.8) 100%);
+    }
+
+
+
+
+
+
+    .seasonal_gift_content {
+        justify-content: flex-end;
+
+        width: 100%;
+
+        padding: 0 28px 45px;
+    }
+
+
+    .seasonal_gift_content h2 {
+        font-size: 32px;
+    }
+
+
+    .seasonal_gift_description {
+        font-size: 14px;
+    }
+
+
+    .seasonal_gift_seasons {
+        gap: 15px;
+
+        margin-bottom: 26px;
+    }
+
+
+    .seasonal_gift_season {
+        font-size: 10px;
+    }
+
+}
+
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.seasonal_gift_content {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 50%;
+    height: 100%;
+
+    padding: 0 70px;
+
+    box-sizing: border-box;
+}
+
+
+/* SEASONAL GIFT */
+.seasonal_gift_eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    color: #F1E8C9;
+}
+
+
+/* Gifts for Every Season */
+.seasonal_gift_content h2 {
+    margin: 0 0 18px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #fff;
+}
+
+
+/* 설명 */
+.seasonal_gift_description {
+    max-width: 440px;
+
+    margin: 0 0 26px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* ========================================
+   SEASONS
+======================================== */
+
+.seasonal_gift_seasons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px 22px;
+
+    margin-bottom: 32px;
+}
+
+
+.seasonal_gift_seasons span {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.10em;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.seasonal_gift_link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.05em;
+
+    color: #fff;
+
+    transition:
+        gap 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.seasonal_gift_link:hover {
+    gap: 18px;
+    opacity: 0.7;
+}
+
+
+.split_link {
+       display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #1A2A49;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.05em;
+
+    color: #1A2A49;
+
+    transition:
+        opacity 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.split_link:hover {
+    gap: 17px;
+    opacity: 0.7;
+
+     border-color: rgba(26, 42, 73, 0.5);
+}
+
+.split_link span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.split_link:hover span {
+    transform: translateX(6px);
+}
+
+
+/* Best Collection */
+
+.collection_guide .split_visual {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+.collection_guide .split_visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(26, 42, 73, 0);
+
+    transition: background 0.35s ease;
+
+    pointer-events: none;
+}
+
+
+.collection_guide .split_visual:hover::after {
+    background: rgba(26, 42, 73, 0.14);
+}
+
+
+.collection_guide .split_visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media screen and (max-width: 900px) {
+
+    .seasonal_gift_guide {
+        height: 480px;
+    }
+
+
+    .seasonal_gift_content {
+        width: 65%;
+
+        padding: 0 50px;
+    }
+
+
+    .seasonal_gift_content h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media screen and (max-width: 650px) {
+
+    .seasonal_gift_guide {
+        height: 500px;
+
+        margin-top: 70px;
+    }
+
+
+    .seasonal_gift_guide::after {
+        background:
+            linear-gradient(180deg,
+                rgba(15, 25, 45, 0.12) 10%,
+                rgba(15, 25, 45, 0.78) 100%);
+    }
+
+
+    .seasonal_gift_content {
+        justify-content: flex-end;
+
+        width: 100%;
+
+        padding: 0 28px 46px;
+    }
+
+
+    .seasonal_gift_content h2 {
+        font-size: 32px;
+    }
+
+
+    .seasonal_gift_description {
+        font-size: 14px;
+    }
+
+
+    .seasonal_gift_seasons {
+        gap: 8px 16px;
+
+        margin-bottom: 26px;
+    }
+
+}
+
+
+/* ========================================
+   SPLIT SECTION
+   두 섹션이 공통으로 사용하는 구조
+======================================== */
+
+.split_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    min-height: 560px;
+}
+
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.split_visual {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.split_visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.split_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 70px 80px;
+
+    background: #FAFAF8;
+}
+
+
+/* 작은 영문 타이틀 */
+.split_eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    color: #9A7343;
+}
+
+
+/* 메인 타이틀 */
+.split_content h2 {
+    margin: 0 0 18px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #1A2A49;
+}
+
+
+/* 서브 타이틀 */
+.split_content h3 {
+    margin: 0 0 18px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+
+/* 설명 */
+.split_description {
+    max-width: 460px;
+
+    margin: 0 0 14px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: rgba(26, 42, 73, 0.68);
+}
+
+
+/* 기프트 서비스 내용 */
+/* ========================================
+   GIFTING SERVICE LIST
+======================================== */
+
+.gifting_service_list {
+    width: 100%;
+
+    margin-top: 20px;
+
+    border-top: 1px solid rgba(26, 42, 73, 0.14);
+}
+
+
+.gifting_service_item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid rgba(26, 42, 73, 0.14);
+}
+
+
+.gifting_service_item strong {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+
+.gifting_service_item p {
+    margin: 0;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: rgba(26, 42, 73, 0.58);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media screen and (max-width: 900px) {
+
+    .split_content {
+        padding: 60px 50px;
+    }
+
+
+    .split_content h2 {
+        font-size: 34px;
+    }
+
+
+    .gifting_service_item {
+        grid-template-columns: 120px 1fr;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media screen and (max-width: 650px) {
+
+    .split_section {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+
+    .split_visual {
+        height: 380px;
+    }
+
+
+    .split_content {
+        padding: 50px 28px 60px;
+    }
+
+
+    .split_content h2 {
+        font-size: 32px;
+    }
+
+
+    .split_content h3 {
+        font-size: 17px;
+    }
+
+
+    .split_description {
+        font-size: 14px;
+    }
+
+
+    .gifting_service_item {
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+
+        padding: 16px 0;
+    }
+
+}

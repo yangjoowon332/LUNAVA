@@ -1,0 +1,423 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("fonts.css");
+
+/* 룸스프레이 헤더 공간 */
+.catalog_section {
+    width: 100%;
+    padding: 80px 0 100px;
+    background: #F7F8FA;
+}
+
+.catalog_section .conterbox {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* 룸스프레이 헤더 공간 폰트 */
+.shop_header {
+  margin-bottom: 80px;
+  text-align: center;
+
+}
+
+.shop_header>span {
+  display: block;
+  margin-bottom: 8px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+
+  color: #1A2A49;
+
+}
+
+.shop_header h2 {
+  margin: 0;
+
+  font-family: "Manrope", "Pretendard", sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+    letter-spacing: 0.07em;
+  color: #1A2A49;
+}
+
+.shop_header  p {
+    margin-top: 12px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: rgba(26, 42, 73, 0.65);
+}
+
+/* 필터 섹션 */
+.filter_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 100px;
+}
+
+
+/* 버튼 그룹 */
+.filter_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* 필터 버튼 */
+.filter_btn {
+    padding: 11px 22px;
+
+    border: 1px solid rgba(26, 42, 73, 0.18);
+    border-radius: 999px;
+
+    background: #fff;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: rgba(26, 42, 73, 0.72);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* Hover */
+.filter_btn:hover {
+    border-color: #1A2A49;
+    color: #1A2A49;
+}
+
+
+/* Active */
+.filter_btn.active {
+    background: #1A2A49;
+    border-color: #1A2A49;
+
+    color: #fff;
+}
+
+/* 제품 그리드 */
+/* =========================
+   SCENT PRODUCT GRID
+========================= */
+
+.scent_products_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 56px 24px;
+
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+
+/* 상품 하나 */
+.scent_item {
+    min-width: 0;
+}
+
+
+/* 카드 링크 */
+.scent_link {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   SCENT IMAGE
+========================= */
+
+.scent_image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #f5f5f5;
+}
+
+
+/* 두 이미지를 같은 위치에 겹침 */
+.scent_image img {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.45s ease;
+}
+
+
+/* 기본 이미지 */
+.scent_image .img_default {
+    opacity: 1;
+    z-index: 2;
+}
+
+
+/* Hover 이미지 */
+.scent_image .img_hover {
+    opacity: 0;
+    z-index: 1;
+
+    transform: scale(1.015);
+}
+
+
+/* =========================
+   IMAGE HOVER
+========================= */
+
+.scent_image:hover .img_default {
+    opacity: 0;
+}
+
+
+.scent_image:hover .img_hover {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================
+   SCENT INFO
+========================= */
+
+.scent_info {
+    padding: 16px 4px 0;
+}
+
+
+/* 제품명 */
+.scent_info h3 {
+    margin: 0 0 6px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+
+/* 향 계열 */
+.scent_family {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #9A7343;
+}
+
+
+/* 향 노트 */
+.scent_note {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+
+    color: rgba(26, 42, 73, 0.55);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .scent_products_grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 44px 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .scent_products_grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+
+/* GIFTING */
+
+.collection_gifting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    min-height: 520px;
+
+    background: #F5F3EF;
+}
+
+
+/* 왼쪽 이미지 */
+.gifting_visual {
+    overflow: hidden;
+}
+
+.gifting_visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* 오른쪽 텍스트 */
+.gifting_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 70px 80px;
+
+    background: #FAFAF8;
+}
+
+
+/* 작은 제목 */
+.gifting_eyebrow {
+    margin-bottom: 12px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    color: #9A7343;
+}
+
+
+/* 메인 제목 */
+.gifting_content h2 {
+    margin: 0 0 22px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #1A2A49;
+}
+
+
+/* 서브 제목 */
+.gifting_content h3 {
+    margin: 0 0 20px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #1A2A49;
+}
+
+
+/* 본문 */
+.gifting_content p {
+    margin: 0 0 14px;
+
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: rgba(26, 42, 73, 0.7);
+}
+
+
+/* CTA */
+.gifting_link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #1A2A49;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.05em;
+
+    color: #1A2A49;
+
+    transition:
+        opacity 0.3s ease,
+        border-color 0.3s ease;
+}
+.gifting_link span {
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+
+.gifting_link:hover {
+    opacity: 0.7;
+
+    border-color: rgba(26, 42, 73, 0.5);
+}
+
+
+.gifting_link:hover span {
+    transform: translateX(6px);
+}

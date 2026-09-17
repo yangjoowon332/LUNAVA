@@ -1,0 +1,504 @@
+@charset "UTF-8";
+
+@import url("reset.css");
+@import url("fonts.css");
+
+
+/* ==================================================
+   LUNAVA DESIGN TOKENS
+================================================== */
+
+:root {
+
+    /* ------------------------------
+       COLOR
+    ------------------------------ */
+
+    --color-primary: #1A2A49;
+    --color-primary-dark: #171C50;
+
+    --color-accent: #4C99EC;
+    --color-accent-light: #B0CCEF;
+
+    --color-white: #FFFFFF;
+
+    --color-text: #1A2A49;
+    --color-text-secondary: rgba(26, 42, 73, 0.70);
+    --color-text-muted: rgba(26, 42, 73, 0.55);
+
+    --color-border: rgba(26, 42, 73, 0.12);
+
+    --color-rating: #C69A5A;
+
+    --color-bg-light: #F7F8FA;
+
+
+    /* ------------------------------
+       FONT FAMILY
+    ------------------------------ */
+
+    --font-en: "Manrope", sans-serif;
+    --font-ko: "Pretendard", "Pretendard-Regular", sans-serif;
+    --font-display: "Inria Serif", serif;
+
+
+    /* ------------------------------
+       FONT SIZE
+    ------------------------------ */
+
+    --font-hero-brand: 60px;
+    --font-hero-title: 52px;
+
+    --font-section-title: 50px;
+    --font-heading: 36px;
+    --font-subheading: 20px;
+
+    --font-body-lg: 18px;
+    --font-body: 16px;
+    --font-body-sm: 14px;
+
+    --font-caption: 13px;
+    --font-button: 14px;
+
+
+    /* ------------------------------
+       LINE HEIGHT
+    ------------------------------ */
+
+    --line-title: 1.2;
+    --line-heading: 1.4;
+    --line-body: 1.7;
+
+
+    /* ------------------------------
+       LAYOUT
+    ------------------------------ */
+
+    --container-width: 1120px;
+
+    --section-space-lg: 120px;
+    --section-space-md: 80px;
+    --section-space-sm: 60px;
+
+
+    /* ------------------------------
+       SPACING
+    ------------------------------ */
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 32px;
+    --space-8: 40px;
+    --space-9: 60px;
+
+
+    /* ------------------------------
+       RADIUS
+    ------------------------------ */
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-pill: 999px;
+
+
+    /* ------------------------------
+       MOTION
+    ------------------------------ */
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-reveal: 0.7s ease;
+}
+
+/* 헤더 */
+/* pc메인헤더 */
+header {
+  width: 100%;
+  height: 114px;
+  background-color: #1A2A49;
+}
+
+.center_box {
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 50px;
+}
+
+header .center_box {
+  padding-top: 20px;
+}
+
+.center_box h1 {
+  position: absolute;
+  left: 48%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.center_box h1 a {
+  display: block;
+}
+
+.center_box h1 img {
+  display: block;
+}
+
+
+.center_box .pc_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.pc_nav ul.gnb {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.pc_nav ul.gnb>li {
+  text-align: center;
+  font-size: 17px;
+  position: relative;
+}
+
+.pc_nav ul.gnb li.gin {
+  margin-right: 350px;
+}
+
+.pc_nav ul.gnb>li>a {
+  display: block;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.pc_nav ul.gnb>li>a span {
+  display: block;
+  font-size: 13px;
+}
+
+.pc_nav .gnb>li:hover>a {
+  background-color: rgba(76, 153, 236, 0.18);
+  color: #ffffff;
+}
+
+.pc_nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+/* gnb가 왼쪽 공간을 차지하게 해서 로그인 버튼을 우측으로 밀어냄 */
+.pc_nav .gnb {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  /* 메뉴 간격 필요시 조절 */
+  margin-right: auto;
+  /* 핵심: 로그인 버튼을 오른쪽 끝으로 */
+  list-style: none;
+  padding: 0;
+  z-index: 10;
+  position: relative;
+}
+
+
+
+/* lnb와 lng배경 */
+.pc_nav .lnb {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 10px 0 0;
+  list-style: none;
+
+  margin: 0;
+
+  z-index: 3;
+}
+
+.pc_nav .lnb>li>a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 50px;
+
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+
+}
+
+.pc_nav .lnb>li>a:hover {
+  color: #4c99ec;
+}
+
+.pc_nav .lnb_bg {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  width: calc(100% + 300px);
+  height: 300px;
+  transform: translateX(-52%);
+
+  background-image: url(../img/main/herde_bg.webp);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 3;
+  display: none;
+}
+
+
+
+/* 로그인 버튼 스타일 */
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  /* pill 모양 */
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  font-weight: 600;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: 
+  transform .08s ease, 
+  box-shadow .2s ease, 
+  background .2s ease, 
+  border-color .2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+  color: #222;
+}
+
+/* 보조 텍스트(한글) 작게 표시 */
+.login-btn span {
+  font-weight: 500;
+  font-size: 12px;
+  opacity: .7;
+  margin-left: 2px;
+}
+
+/* hover/focus/active 상태 */
+.login-btn:hover {
+  background: #f8f8f8;
+  border-color: #cfcfcf;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+}
+
+.login-btn:active {
+  transform: translateY(1px);
+}
+
+.login-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, .2);
+}
+
+/* 다크배경 헤더에서 보이게 하고 싶은 경우(선택) */
+.header-dark .login-btn {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .18);
+  color: #fff;
+}
+
+.header-dark .login-btn:hover {
+  background: rgba(255, 255, 255, .14);
+  border-color: rgba(255, 255, 255, .28);
+}
+
+
+/* 푸터 */
+
+footer {
+  width: 100%;
+  background-color: #1A2A49;
+  color: #fff;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 전체 콘텐츠 영역 */
+footer .center_box {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 30px 50px 20px;
+
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 80px;
+}
+
+/* Brand */
+.footer_brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer_logo {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.footer_logo img {
+  display: block;
+  max-width: 140px;
+}
+
+.footer_description {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Navigation */
+.footer_nav {
+  display: flex;
+  gap: 80px;
+}
+
+.footer_nav_group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_nav_group strong,
+.footer_social strong {
+  margin-bottom: 8px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+.footer_nav_group a {
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 14px;
+  text-decoration: none;
+
+  transition: color 0.2s;
+}
+
+.footer_nav_group a:hover {
+  color: #4c99ec;
+}
+
+
+/* Social */
+.footer_social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer_social a {
+  display: block;
+}
+
+.footer_social img {
+  display: block;
+  max-width: 100px;
+}
+
+
+/* Footer Bottom */
+.footer_bottom {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 50px 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer_bottom p {
+  margin: 0;
+}
+
+.footer_policy {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_policy a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+
+  transition: color 0.2s;
+}
+
+.footer_policy a:hover {
+  color: #fff;
+}
+/* 네비게이션 */
+.back_to_top {
+    position: fixed;
+
+    right: 60px;
+    bottom: 40px;
+
+    width: 50px;
+    height: 50px;
+
+    border: 2px solid rgba(9, 44, 114, 0.371);
+    border-radius: 50%;
+
+    background: #fff;
+    color: #1A2A49;
+
+    cursor: pointer;
+
+    z-index: 500;
+}
+
+.back_to_top {
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: 0.3s;
+}
+
+.back_to_top.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
